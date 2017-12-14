@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar color="nav">
+      <ion-title text-center>
+          Profile
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+      <div style="float:left; margin:10% ;font-size: 30pt">
+          <img src="{{photo}}">
+      </div>
+
+      <div style="margin-top:12%">
+          {{displayName}}
+      </div>
+  </ion-item>
+
+
+  <ion-item (click)="setting()">
+      <ion-buttons style="float:left;margin:3%">
+          <ion-icon ios="ios-settings" md="ios-settings"></ion-icon>
+      </ion-buttons>
+
+      <h6 style="margin:3%">ตั้งค่า</h6>
+      <ion-buttons item-end>
+          <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+      </ion-buttons>
+  </ion-item>
+  <ion-item (click)="annouce()">
+      <ion-buttons style="float:left;margin:3%">
+          <ion-icon ios="ios-megaphone" md="ios-megaphone"></ion-icon>
+      </ion-buttons>
+
+      <h6 style="margin:3%">ประกาศ</h6>
+      <ion-buttons item-end>
+          <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+      </ion-buttons>
+  </ion-item>
+  <ion-item (click)="help()">
+
+      <ion-buttons style="float:left;margin:3%">
+          <ion-icon ios="ios-information-circle" md="ios-information-circle"></ion-icon>
+      </ion-buttons>
+      <h6 style="margin:3%">สอบถาม</h6>
+      <ion-buttons item-end>
+          <ion-icon ios="ios-arrow-down" md="ios-arrow-down"></ion-icon>
+      </ion-buttons>
+  </ion-item>
+  <div style="margin:5%">
+      <button ion-button outline style="width:99%" (click)="signOut()">Logout</button>
+  </div>
+
+
+</ion-content>

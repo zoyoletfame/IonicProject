@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="nav">
+      <ion-title > 
+          <ion-select [(ngModel)]="currentTab" style="margin-left:15%;font-size: 14pt;width:50% !important">
+              <ion-option *ngFor="let tab of tabs">{{tab}}</ion-option>
+          </ion-select>
+          <!-- <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown"></ion-icon> -->
+      </ion-title>
+
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+      <img src="https://vignette.wikia.nocookie.net/fairytail/images/0/00/Character_Slider_no_2.jpg/revision/latest/scale-to-width-down/500?cb=20130117033701">
+  </ion-card>
+
+  <div class="md-prev-btn " (click)="prev()">
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+  </div>
+  <div class="md-next-btn " (click)="next()">
+      <ion-icon ios="ios-arrow-forward" md="md-arrow-forward"></ion-icon>
+  </div>
+</ion-content>

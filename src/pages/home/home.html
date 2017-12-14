@@ -1,14 +1,39 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="nav">
+      <ion-title text-center>Manga Feed</ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+      <ion-slides autoplay="5000" loop="true" speed="3000" pager="true">
+          <ion-slide *ngFor="let picture of pictures" (click)="mangaDetail()">
+              <img src="{{picture}}">
+          </ion-slide>
+      </ion-slides>
+  </ion-card>
+  <hr>
+  <ion-list>
+    <ion-title style="margin-left:2%;margin-top:3%;margin-bottom: 3%">
+          การตูนที่อัพเดทแต่ละตอน   
+    </ion-title>
+    <hr>
+      <ion-item *ngFor="let manga of mangaLists" (click)="readPage()">
+          <div class="image-card">
+              <img src="{{manga.image}}">
+          </div>
+          <div class="text-format">
+              {{manga.name}}
+          </div>
+          <div class="text-date">
+              ตอนที่ 1 &nbsp; 12/02/2559
+          </div>
+
+
+
+
+      </ion-item>
+  </ion-list>
+
 </ion-content>

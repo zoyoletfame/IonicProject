@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="nav">
+      <ion-title style="margin-left:15%">Manga Detail</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+      <ion-card>
+          <img src="https://vignette.wikia.nocookie.net/fairytail/images/0/00/Character_Slider_no_2.jpg/revision/latest/scale-to-width-down/500?cb=20130117033701">
+      </ion-card>
+  </ion-item>
+
+  <ion-list>
+      <ion-item *ngFor="let manga of mangaLists" (click)="readPage()">
+          <div class="image-card">
+              <img src="{{manga.image}}">
+          </div>
+          <div class="text-format">
+              {{manga.page}}
+          </div>
+      </ion-item>
+  </ion-list>
+
+</ion-content>

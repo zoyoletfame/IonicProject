@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="nav">
+      <ion-title text-center>Library</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top (click)="refresh()">
+      <ion-segment [(ngModel)]="library">
+          <ion-segment-button value="favorite">
+              Favorite
+          </ion-segment-button>
+          <ion-segment-button value="upload">
+              My Manga
+          </ion-segment-button>
+      </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+ {{library}}
+  <div [ngSwitch]="library">
+      <ion-list *ngSwitchCase="'favorite'" (click)="readPage()">
+          <ion-item *ngFor="let manga of mangaLists">
+              <img src="{{manga.image}}">
+              <br> {{manga.name}}
+          </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'upload'">
+          <ion-item>
+              <button ion-button icon-left block (click) ="uploadNewManga()">อัพโหลดการ์ตูนใหม่</button>
+          </ion-item>
+      </ion-list>
+  </div>
+
+
+</ion-content>
