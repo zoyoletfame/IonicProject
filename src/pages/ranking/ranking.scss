@@ -1,8 +1,14 @@
-.image-card{
-    width: 40%;
+.image-card-ranking{
+    width: 100px;
+    height: 60px;
     float:left;
     
 }
 .text-ranking{
     margin-top: 5%;
+    margin-left: 60%;
+    max-width:40%;
+    overflow: inherit ;
+    text-overflow: inherit ;
+    white-space: normal;    
 }

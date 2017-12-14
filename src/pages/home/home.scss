@@ -1,5 +1,6 @@
 .image-card{
-    width: 30%;
+    width: 100px;
+    height: 60px;
     float:left;
     
 }
@@ -8,6 +9,9 @@
     margin-left: 45%;
     margin-bottom: 5%;
     font-weight: bold;
+    overflow: inherit ;
+    text-overflow: inherit ;
+    white-space: normal;   
 }
 
 .text-date{
